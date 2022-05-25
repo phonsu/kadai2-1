@@ -4,7 +4,7 @@
     <link rel="stylesheet" media="all" href="application.css">
   </head>
   <body>
-    <p id="notice"></p>
+    <p><%= notice %></p>
     <h1>Books</h1>
     <table>
       <thead>
@@ -22,7 +22,8 @@
           <td><%= link_to "Edit", edit_book_path(book.id) %></td>
           <td><%= link_to "Destroy", book_path(book.id), method: :delete, "data-confirm" => "Are you sure？" %></td>
 
-        <% end %>
+            <% end %>
+
       </tbody>
     </table>
 
@@ -35,7 +36,7 @@
       <li><%= message %></li>
     <% end %>
   </ul>
-<% end %>
+  <% end %>
 
     <%= form_with model: @book, url: '/books', method: :post do |f| %>
     <h4>title</h4>
